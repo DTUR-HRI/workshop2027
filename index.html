@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D-TUR Workshop – Designing Transparent and Understandable Robots | HRI '27, USA</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("mosaic.jpg");
+            background-size: cover;
+            background-position: center;
+            opacity: 0.975;
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        .footer {
+            margin-top: 20px;
+            padding: 20px 0;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+        .schedule {
+            display: none;
+        }
+        .jumbotron {
+            background-color: #ffe6e6;
+        }
+        .home-jumbotron {
+            background-color: #ffe6e6;
+        }
+        .organizer-img {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        .organizer-card {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">D-TUR Workshop @ HRI ’27</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('home')">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('schedule')">Schedule</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('keynote')">Keynote Speakers</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('cfp')">Call for Papers</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('organizers')">Organizers</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container" id="home">
+    <div class="jumbotron home-jumbotron">
+        <h1 class="display-4">Designing Transparent and Understandable Robots (D-TUR)</h1>
+        <p class="lead">Hybrid Workshop at HRI '27, March XX, 2027, USA</p>
+        <hr class="my-4">
+
+        <p>
+        As robots become increasingly autonomous and integrated into everyday human environments, 
+        understanding <b>how</b> and <b>why</b> they behave as they do is critical for establishing trust, 
+        safety, and effective collaboration. The <b>Designing Transparent and Understandable Robots (D-TUR)</b> workshop 
+        aims to bring together researchers interested in improving robot understandability across physical and social contexts of Human–Robot Interaction (HRI). 
+        </p>
+
+        <p>
+        The workshop will explore design, perception, and evaluation of transparency and understandability in robots—bridging insights from 
+        cognitive science, social robotics, machine learning, and human–computer interaction. 
+        We encourage participation from both academia and industry, to foster interdisciplinary dialogue 
+        on creating robots that communicate intent, uncertainty, and reasoning processes in ways that are 
+        intuitive to diverse users.
+        </p>
+
+        <p>
+        This workshop will follow a hybrid format, allowing for participation both in-person and remotely. Please stay tuned for details regarding the remote session.
+        </p>
+       <p>Main Topics of Interest:</p>
+        <ul>
+            <li>Designing understandable robots through affordances</li>
+            <li>Designing legible robot behaviors</li>
+            <li>Transparency through XAI or mechanistic interpretability</li>
+            <li>Understanding robot failures, intents, and capabilities</li>
+            <li>Explanations in HRI</li>
+            <li>Metrics & evaluation methods for measuring understanding</li>
+            <li>Co-designing understandable robots with users</li>
+            <li>(Dis-)Advantages of making robots understandable</li>
+            <li>Personalization to improve understanding</li>
+            <li>Adapting the level of transparency based on context</li>
+        </ul>
+    </div>
+</div>
+
+<div class="container schedule" id="keynote">
+    <div class="jumbotron">
+        <h2>Keynote Speakers</h2>
+        <p>We are pleased to introduce our exteemed keynote speakers</p>
+        <!-- <img src="PATH_TO_IMAGE_ADMONI" alt="Prof. Henny Admoni" style="width:200px;"> -->
+        <p>
+            <strong>Dr. XX</strong>.
+        </p>
+        
+        <!-- <img src="PATH_TO_IMAGE_ROSSI" alt="Prof. Alessandra Rossi" style="width:200px;"> -->
+        <p>
+            <strong>Dr. XX</strong> .
+        </p>
+    </div>
+</div>
+    
+<div class="container schedule" id="schedule">
+  <div class="jumbotron">
+    <h2>Tentative Schedule</h2>
+    <p>Date: March XX, 2027 (Half-day Workshop), Room: XX</p>
+    <p>Here is the zoom room for online attendees: XX</p>
+    <table border="1" cellpadding="6" cellspacing="0">
+      <tr><td>09:30 - 09:35</td><td>Welcome and introduction to the workshop</td></tr>
+      <tr>
+        <td>09:35 - 10:10</td>
+        <td>
+          Keynote 1 and Q&amp;A — <strong>Dr. Henny Admoni</strong>, Carnegie Mellon University:<br>
+          <em>Shaping Interactions Through Theory of Mind Modeling</em>
+        </td>
+      </tr>
+      <tr><td>10:10 - 10:55</td><td>Paper presentations:</em><br>
+      </td></tr>
+      <tr><td>10:55 - 11:10</td><td>Coffee break and networking</td></tr>
+      <tr>
+        <td>11:10 - 11:45</td>
+        <td>
+          Keynote 2 and Q&amp;A — <strong>Dr. Alessandra Rossi</strong>, University of Naples “Federico II”:<br>
+          <em>Transparent and personalised robot behaviours for trustworthy interactions</em>
+        </td>
+      </tr>
+      <tr><td>11:45 - 12:30</td><td>Interactive break-out sessions</td></tr>
+      <tr><td>12:30 - 12:55</td><td>Discussing the break-out session results</td></tr>
+      <tr><td>12:55 - 13:00</td><td>Concluding remarks</td></tr>
+    </table>
+
+    <br>
+    <img src="edinburgh-campus-map-SCOTT.png" alt="Location of SCOTT room" class="map-img">
+
+
+    <p>
+      The interactive break-out sessions will allow workshop participants to discuss their experiences and challenges 
+      with making robot behavior understandable in smaller groups. Questions will be provided to focus discussions on 
+      open problems. Example questions include:
+    </p>
+    <ul>
+      <li>"How can we use transparency to ensure that the integration of robots into people's lives does not disrupt their daily life?"</li>
+      <li>"Which transparency aspects are relevant to empower the general public and not just experts to use robots efficiently?"</li>
+    </ul>
+    <p>
+      Further questions will be based on the presented submissions to increase engagement. During the break-out sessions, 
+      the organizers of the workshop will actively participate and help guide the discussions when necessary. Online 
+      participants will have their own break-out room to make communication easier. We aim to encourage all participants 
+      to share their experiences and thoughts, allowing us to discuss open problems from various perspectives. Each group 
+      will be asked to summarize the main points of their discussions afterwards in a general discussion with all attendees.
+    </p>
+  </div>
+</div>
+
+
+<div class="container schedule" id="cfp">
+    <div class="jumbotron">
+        <h2>Call for Papers</h2>
+        
+        <p>
+        We invite short paper submissions (up to 6 pages) presenting original, ongoing, or position work 
+        on transparency, understandability, and explainability in human–robot interaction. 
+        Topics of interest include theoretical frameworks, experimental studies, design case studies, 
+        and applications related to understandability of robots in physical and social HRI.
+        </p>
+
+        <h3>Target Audience</h3>
+        <p>
+        The D-TUR workshop will follow a hybrid format, allowing for participation both in-person and remotely. 
+        This workshop targets researchers, designers, and practitioners from fields such as 
+        Human–Robot Interaction, Explainable AI, Robotics, Cognitive Science, and Human–Computer Interaction. 
+        We particularly welcome contributions from interdisciplinary teams interested in both technical 
+        and human-centered perspectives on robot understandablity and transparency.
+        </p>
+
+        <h3>Submission Guidelines</h3>
+        <p>
+        Manuscripts should be written in English and follow the general ACM SIG format ("sigconf", double column format). 
+        Manuscripts will undergo a double-blind review, authors should ensure that they anonymize their submissions according to the <a href="https://humanrobotinteraction.org/2026/authorship-and-anonymization/">HRI Anonymization Guidelines</a>.  
+        Submissions should be up to 6 pages (excluding references). 
+        Accepted papers will be presented as short talks, and will be included on the workshop website.
+        </p>
+
+        <p>
+        To accommodate authors aiming for the early-bird HRI registration deadline, we provide two submission tracks: an early track synchronized with the early-bird registration for HRI 2026 and a regular track with a later deadline.
+        </p>
+        
+        <ul>
+            <li><strong>Submission opens:</strong> January 1, 2026</li>
+            <li><strong>Early bird Submission deadline:</strong> January 18, 2026</li>
+
+            <li><strong>Early bird Submission Notification Acceptance:</strong> January 22, 2026</li>
+            <li><strong>Regular Submission deadline:</strong> February 20, 2026</li>
+            
+            <li><strong>Regular Notification of acceptance:</strong> February 25, 2026</li>
+            <li><strong>Camera-ready deadline:</strong> March 6, 2026</li>
+            <li><strong>Workshop date:</strong> March 16, 2026</li>
+        </ul>
+
+        <p>
+        Submission Webstite: 
+        <a href="https://openreview.net/group?id=humanrobotinteraction.org/HRI/2026/Workshop/D-TUR&referrer=%5BHomepage%5D(%2F)#tab-recent-activity">OpenReview</a>
+
+        </p>
+        <p>
+        In case of questions, please contact: 
+        <a href="mailto:dtur.workshop.hri@gmail.com">dtur.workshop.hri@gmail.com</a>
+        </p>
+    </div>
+</div>
+
+<div class="container schedule" id="organizers">
+  <div class="jumbotron">
+    <h2>Organizers</h2>
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="organizer-card">
+          <img src="merle.jpg" alt="Merle Reimann" class="organizer-img">
+          <h3>Merle Reimann</h3>
+          <p>KTH Royal Institute of Technology, Sweden</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="organizer-card">
+          <img src="greg.jpg" alt="Gregory LeMasurier" class="organizer-img">
+          <h3>Gregory LeMasurier</h3>
+          <p>University of Massachusetts Lowell, USA</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="organizer-card">
+          <img src="parag.jpeg" alt="Parag Khanna" class="organizer-img">
+          <h3>Parag Khanna</h3>
+          <p>KTH Royal Institute of Technology, Sweden</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="organizer-card">
+          <img src="lenny.jpg" alt="Lennart Wachowiak" class="organizer-img">
+          <h3>Lennart Wachowiak</h3>
+          <p>King’s College London / Imperial College London, UK</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="organizer-card">
+          <img src="wenxi.jpg" alt="Wenxi Wu" class="organizer-img">
+          <h3>Wenxi Wu</h3>
+          <p>King’s College London / Imperial College London, UK</p>
+        </div>
+      </div>  
+      <div class="col-md-4">
+        <div class="organizer-card">
+          <img src="martim.jpg" alt="Martim Brandão" class="organizer-img">
+          <h3>Martim Brandão</h3>
+          <p>King’s College London, UK</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="organizer-card">
+          <img src="gerard.jpg" alt="Gerard Canal" class="organizer-img">
+          <h3>Gerard Canal</h3>
+          <p>King’s College London, UK</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="organizer-card">
+          <img src="christian.jpg" alt="Christian Smith" class="organizer-img">
+          <h3>Christian Smith</h3>
+          <p>KTH Royal Institute of Technology, Sweden</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="organizer-card">
+          <img src="iolanda.jpg" alt="Iolanda Leite" class="organizer-img">
+          <h3>Iolanda Leite</h3>
+          <p>KTH Royal Institute of Technology, Sweden</p>
+        </div>
+      </div>
+    </div>
+
+    <p><strong>Workshop Contact:</strong> <a href="mailto:dtur.workshop.hri@gmail.com">dtur.workshop.hri@gmail.com</a></p>
+  </div>
+</div>
+
+
+<div class="footer">
+    <p>&copy; 2026 D-TUR Workshop @ HRI '27, USA. All rights reserved.</p>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script>
+    function showSection(sectionId) {
+        document.querySelectorAll('.container').forEach(function(section) {
+            section.style.display = 'none';
+        });
+        document.getElementById(sectionId).style.display = 'block';
+    }
+    showSection('home');
+</script>
+</body>
+
+</html>
