@@ -51,17 +51,17 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">D-TUR Workshop @ HRI ’27</a>
+    <a class="navbar-brand" href="#home">D-TUR Workshop @ HRI ’27</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('home')">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('schedule')">Schedule</a></li>
-            <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('keynote')">Keynote Speakers</a></li>
-            <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('cfp')">Call for Papers</a></li>
-            <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('organizers')">Organizers</a></li>
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
+            <li class="nav-item"><a class="nav-link" href="#keynote">Keynote Speakers</a></li>
+            <li class="nav-item"><a class="nav-link" href="#cfp">Call for Papers</a></li>
+            <li class="nav-item"><a class="nav-link" href="#organizers">Organizers</a></li>
         </ul>
     </div>
 </nav>
@@ -319,13 +319,54 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script>
+    // Each section has its own URL, e.g. .../index.html#cfp
+    var SECTIONS = ['home', 'schedule', 'keynote', 'cfp', 'organizers'];
+
     function showSection(sectionId) {
+        if (SECTIONS.indexOf(sectionId) === -1) {
+            sectionId = 'home';
+        }
         document.querySelectorAll('.container').forEach(function(section) {
             section.style.display = 'none';
         });
         document.getElementById(sectionId).style.display = 'block';
+
+        // highlight the matching nav item
+        document.querySelectorAll('.navbar-nav .nav-link').forEach(function(link) {
+            if (link.getAttribute('href') === '#' + sectionId) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+
+        // update the page title so shared links / bookmarks are meaningful
+        document.title = TITLES[sectionId];
+
+        // close the collapsed menu on mobile
+        var nav = document.getElementById('navbarNav');
+        if (nav) {
+            nav.classList.remove('show');
+        }
     }
-    showSection('home');
+
+    var BASE_TITLE = "D-TUR Workshop – Designing Transparent and Understandable Robots | HRI '27, USA";
+    var TITLES = {
+        home: BASE_TITLE,
+        schedule: 'Schedule | ' + BASE_TITLE,
+        keynote: 'Keynote Speakers | ' + BASE_TITLE,
+        cfp: 'Call for Papers | ' + BASE_TITLE,
+        organizers: 'Organizers | ' + BASE_TITLE
+    };
+
+    function routeFromHash() {
+        var id = (window.location.hash || '#home').substring(1);
+        showSection(id);
+        window.scrollTo(0, 0);
+    }
+
+    window.addEventListener('hashchange', routeFromHash);
+    routeFromHash();
 </script>
 </body>
 
